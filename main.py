@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt         #Importerar bibliotek
 import numpy as np
 
 X =  [x for x in range(1,101)]   #Våra listor
-Y = [(x*2 + np.random.randint(30)) for x in X]        # Y = 2X + randomness
+Y = [(x*2 + np.random.randint(30)) for x in X]        # Y = 2X + randomness ändra gärna
 
 
 
@@ -29,7 +29,9 @@ for i in range(iterationer):
     print(error)
     error = 0
 
+
+
 plt.scatter(X,Y, color = "red", s = 50)
 plt.plot(list(range(0, len(X))), [function(x) for x in range(0, len(X))], color = "b")
 plt.show()
-print (k,m)
+print (f"function = {round(k,2)}x + {round(m,2)}")
